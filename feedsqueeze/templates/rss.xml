@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <link>{{ feed.id }}</link>
+    <title>{{ feed.title }}</title>
+    <lastBuildDate>{{ feed.updated }}</lastBuildDate>
+    <generator>{{ feed.generator }}</generator>
+    {% for entry in feed.entries %}
+    <item>
+      <guid isPermalink="false">{{ entry.id }}</guid>
+      <title><![CDATA[{{ entry.title }}]]></title>
+      <link>{{ entry.link }}</link>
+      <description><![CDATA[
+        {% if entry.content %}
+          {{ entry.content }}
+        {% else %}
+          {{ entry.summary }}
+        {% endif %}
+      ]]></description>
+      <pubDate>{{ entry.published }}</pubDate>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
