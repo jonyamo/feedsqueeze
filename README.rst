@@ -38,6 +38,6 @@ As a module:
 
 .. code-block:: python
 
-    from feedsqueeze import squeeze
+    from feedsqueeze.main import squeeze
 
     >>> squeeze(list_of_feeds)
