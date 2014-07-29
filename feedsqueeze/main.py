@@ -9,9 +9,6 @@ Main entry point for FeedSqueeze.
 import feedparser
 import time
 
-from pprint import pprint
-import sys
-
 from . import __title__, __version__
 from .feed_formats import get_feed_format
 from .utils import render_template
