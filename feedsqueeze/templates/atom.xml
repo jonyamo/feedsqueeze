@@ -9,7 +9,7 @@
     <id>{{ entry.id }}</id>
     <link rel="alternate" href="{{ entry.link }}"/>
     <title><![CDATA[{{ entry.title }}]]></title>
-    <content><![CDATA[
+    <content type="html"><![CDATA[
       {% if entry.content %}
         {{ entry.content }}
       {% else %}
