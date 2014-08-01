@@ -9,7 +9,7 @@
     <item>
       <guid isPermalink="false">{{ entry.id }}</guid>
       <title><![CDATA[{{ entry.title }}]]></title>
-      <link>{{ entry.link }}</link>
+      <link>{{ entry.link|e }}</link>
       <description><![CDATA[
         {% if entry.content %}
           {{ entry.content }}
